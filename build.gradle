@@ -30,15 +30,12 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-
-//打包类型为jar
-jar {
-	baseName = 'blog'
-	version = '1.0.0'
-}
-
+apply plugin: 'application'
 // 指定编译 .java 文件的 JDK 版本
+
+version = '1.0'
 sourceCompatibility = 1.8
+mainClassName = 'club.yongz.yunyi.blog.Application'
 
 // 默认使用了 Maven 的中央仓库。这里改用阿里云的镜像库
 repositories {
